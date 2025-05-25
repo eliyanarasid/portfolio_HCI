@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Work Produced</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fce4ec, #e1f5fe);
+    }
+
+    h1 {
+      font-family: 'Decorative', cursive;
+      font-size: 45px;
+      font-weight: bold;
+      color: #4a148c;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 30px;
+    }
+
+    #navigation {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    #navigation ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #navigation ul li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    #navigation ul li a:hover {
+      color: #7b1fa2;
+    }
+
+    .section {
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .content-button {
+      padding: 12px 24px;
+      background-color: #4a148c;
+      color: white;
+      border: none;
+      margin: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .content-button:hover {
+      background-color: #7b1fa2;
+    }
+
+    .hidden-content {
+      display: none;
+      margin-top: 30px;
+    }
+
+    iframe, img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    /* Sosial media styling */
+    .social-container {
+      font-family: 'Decorative', cursive;
+      font-size: 30px;
+      font-weight: bold;
+      color: #4a148c;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 30px;
+    }
+
+    .social-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .social-button:hover {
+      transform: scale(1.05);
+    }
+
+    .instagram { background: #E1306C; }
+    .tiktok { background: #010101; }
+    .facebook { background: #1877F2; }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .edu-image {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div id="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="personal_intro.html">Intro</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="edu.html">Education</a></li>
+      <li><a href="workProduce.html">Experience</a></li>
+      <li><a href="hobby.html">Hobby</a></li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <div class="section">
+    <h1>My Work Produced & Created</h1>
+    <p>Click the buttons below to view my work:</p>
+
+    <button class="content-button" onclick="toggleContent('poster')">Show Poster</button>
+    <button class="content-button" onclick="toggleContent('video')">Show Video</button>
+    <button class="content-button" onclick="toggleContent('project')">Show Project</button>
+
+    <div id="poster" class="hidden-content">
+      <img src="image/projek1.png" alt="My Poster">
+      <img src="image/baru.webp" alt="My Poster">
+    </div>
+
+    <div id="video" class="hidden-content">
+      <iframe src="video/montaj_BITM.mp4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="video/nono.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div id="project" class="hidden-content">
+      <iframe src="video/kk_sastera.mp4" allowfullscreen></iframe>
+      <img src="image/website_projek.png">
+      <img src="image/wesite_1.png">
+    </div>
+
+  <!-- Butang media sosial -->
+  <div class="social-container">
+    <h2>Follow Me on Social Media</h2>
+
+    <a class="social-button instagram" href="https://www.instagram.com/eliyanarasid__" target="_blank">Instagram</a>
+    <a class="social-button tiktok" href="https://www.tiktok.com/@eliyanarasid_" target="_blank">TikTok</a>
+    <a class="social-button facebook" href="https://www.facebook.com/eliyana.rasid" target="_blank">Facebook</a>
+  </div>
+
+  <!-- Pengalaman Kerja -->
+  <div class="social-container">
+    <h2>My Experience in Job</h2>
+    <div class="image-grid-item">
+      <img src="image/chef.jpg" alt="Chef" class="edu-image">
+      <img src="image/hidang.jpg" alt="Chef" class="edu-image">
+      <div class="image-caption">Job with Kambing Cowboy & Catering Langkawi from 2021-2025</div>
+    </div>
+</div>
+
+<script>
+  function toggleContent(id) {
+    const content = document.getElementById(id);
+    content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+  }
+</script>
+</body>
+</html>

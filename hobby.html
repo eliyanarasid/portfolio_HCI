@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>My Hobbies</title>
+  <style>
+    h1 {
+      font-family: 'Decorative', cursive;
+      font-size: 45px;
+      font-weight: bold;
+      color: #4a148c;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fce4ec, #e1f5fe);
+    }
+
+    .pdf-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 60px auto;
+    }
+
+    .pdf-frame {
+      width: 300px;
+      height: 400px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    #navigation {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    #navigation ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #navigation ul li {
+      display: inline;
+    }
+
+    #navigation ul li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    #navigation ul li a:hover {
+      color: #7b1fa2;
+    }
+
+    .section {
+      padding-top: 80px; /* to avoid overlap with fixed navbar */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div id="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="personal_intro.html">Intro</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="edu.html">Education</a></li>
+      <li><a href="workProduce.html">Experience</a></li>
+      <li><a href="hobby.html">Hobby</a></li>
+    </ul>
+  </div>
+
+  <!-- Hobby Section -->
+  <div class="section">
+    <h1>My Hobbies</h1>
+
+    <!-- Top Row: 3 PDFs -->
+    <div class="pdf-container">
+      <iframe class="pdf-frame" src="hobby/hobby_picture.pdf"></iframe>
+      <iframe class="pdf-frame" src="hobby/sketch.pdf"></iframe>
+      <iframe class="pdf-frame" src="hobby/hobby_poem.pdf"></iframe>
+    </div>
+
+    <!-- Bottom Row: 2 PDFs -->
+    <div class="pdf-container">
+      <iframe class="pdf-frame" src="hobby/hobby_nature.pdf"></iframe>
+      <iframe class="pdf-frame" src="hobby/hobby_cook.pdf"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
+
